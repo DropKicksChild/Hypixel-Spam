@@ -31,7 +31,9 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
   
-
+bot.on('kicked', console.log)
+bot.on('error', console.log)
+  
 bot.on('spawn', async (username, message) => {
   console.log(` said "${message}"`)
   await sleep(5000);
